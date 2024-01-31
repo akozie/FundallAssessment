@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Fundall</string>
+    <string name="by_clicking_on_sign_up_you_agree_to_our_terms_conditions_and_privacy_policy"><![CDATA[By clicking on Sign up, you agree to our terms & conditions and privacy policy.]]></string>
+    <string name="start">Start</string>
+    <string name="for_everyone">for everyone</string>
+    <string name="let_s_get_started">Let’s get started</string>
+    <string name="your_first_step_toward_a_better_financial_lifestyle_starts_here">Your first step toward a better financial lifestyle starts here.</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="email_address">Email address</string>
+    <string name="phone_number">Phone number</string>
+    <string name="password">Password</string>
+    <string name="got_invite_code">Got invite code?</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="log_in">LOG IN</string>
+    <string name="create_account">Create Account </string>
+    <string name="new_here">New here?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fundall_e_wallet">Fundall e-Wallet</string>
+    <string name="spent">Spent</string>
+    <string name="income">Income</string>
+    <string name="all_please_enter_first_name">Please enter your first name</string>
+    <string name="all_please_enter_last_name">Please enter your last name</string>
+    <string name="all_please_enter_phone_number">Please enter your phone number</string>
+    <string name="all_please_enter_email_address">Please enter your email address</string>
+    <string name="all_please_enter_password">Please enter your password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="all_password_mismatch">Password mismatch</string>
+    <string name="we_miss_you">We miss you, %1s</string>
+    <string name="_12_634_37">₦12,634.37</string>
+    <string name="request_card">Request Card</string>
+    <string name="analytics">Analytics</string>
+    <string name="cancel">Cancel</string>
+    <string name="currency_symbol">₦ %1s</string>
+    <string name="loading">Loading...</string>
+    <string name="kindly_sign_up">Kindly sign up</string>
+</resources>

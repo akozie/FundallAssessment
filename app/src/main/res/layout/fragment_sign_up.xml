@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.ui.fragment.SignUpFragment">
+
+    <data>
+
+    </data>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_marginStart="@dimen/margin_10"
+                android:padding="@dimen/paddind_20dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/benefits"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/benefits" />
+
+            <TextView
+                android:id="@+id/benefits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Benefits"
+                android:padding="@dimen/paddind_20dp"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.18" />
+
+            <TextView
+                android:id="@+id/get_started"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:text="@string/let_s_get_started"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline_1" />
+
+            <TextView
+                android:id="@+id/your_first_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:text="@string/your_first_step_toward_a_better_financial_lifestyle_starts_here"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/get_started"
+                app:layout_constraintTop_toBottomOf="@+id/get_started" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/margin_20dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/your_first_step">
+
+                <EditText
+                    android:id="@+id/first_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:drawableStart="@drawable/user"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:hint="@string/first_name"
+                    android:textColorHint="@color/text_hint_color"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <EditText
+                    android:id="@+id/last_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:drawableStart="@drawable/user"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:hint="@string/last_name"
+                    android:textColorHint="@color/text_hint_color"
+                    app:layout_constraintBottom_toBottomOf="@+id/first_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_2"
+                    app:layout_constraintTop_toTopOf="@+id/first_name" />
+
+                <EditText
+                    android:id="@+id/email_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:drawableStart="@drawable/email"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:hint="@string/email_address"
+                    android:textColorHint="@color/text_hint_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/first_name" />
+
+
+                <EditText
+                    android:id="@+id/phone_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:drawableStart="@drawable/contact"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:hint="@string/phone_number"
+                    android:inputType="phone"
+                    android:textColorHint="@color/text_hint_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/email_address" />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:drawableStart="@drawable/password"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/text_hint_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phone_number" />
+
+                <ImageView
+                    android:id="@+id/password_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/margin_10"
+                    android:src="@drawable/password_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/password"
+                    app:layout_constraintEnd_toEndOf="@+id/password"
+                    app:layout_constraintTop_toTopOf="@+id/password" />
+
+                <EditText
+                    android:id="@+id/confirm_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:drawableStart="@drawable/password"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/text_hint_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/password" />
+
+                <ImageView
+                    android:id="@+id/confirm_password_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/margin_10"
+                    android:src="@drawable/password_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirm_password"
+                    app:layout_constraintEnd_toEndOf="@+id/confirm_password"
+                    app:layout_constraintTop_toTopOf="@+id/confirm_password" />
+
+                <TextView
+                    android:id="@+id/invite_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:text="@string/got_invite_code"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="@+id/confirm_password"
+                    app:layout_constraintTop_toBottomOf="@+id/confirm_password" />
+
+                <Button
+                    android:id="@+id/register_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/password"
+                    app:layout_constraintStart_toStartOf="@+id/invite_code"
+                    app:layout_constraintTop_toBottomOf="@+id/invite_code" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/register_button"
+                    app:layout_constraintStart_toStartOf="@+id/register_button"
+                    app:layout_constraintTop_toBottomOf="@+id/register_button">
+
+                    <TextView
+                        android:id="@+id/already_a_member"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Already a member? "
+                        app:layout_constraintBottom_toBottomOf="@+id/log_in"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/log_in" />
+
+                    <TextView
+                        android:id="@+id/log_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/margin_10"
+                        android:paddingEnd="@dimen/margin_10"
+                        android:paddingBottom="@dimen/margin_10"
+                        android:text="Log in"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/already_a_member"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <TextView
+                android:id="@+id/privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/by_clicking_on_sign_up_you_agree_to_our_terms_conditions_and_privacy_policy"
+                android:textSize="@dimen/text_size_11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
