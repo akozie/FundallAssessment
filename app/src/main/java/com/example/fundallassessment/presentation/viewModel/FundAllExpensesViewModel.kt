@@ -94,4 +94,5 @@ class FundAllExpensesViewModel @Inject constructor(
             _userDetailsResponse.value = Resource.Error("NOT FOUND")
         }
     }
+    fun removeUserDetailsFromSharedPref() = sessionManager.removeLoggedInUser()
 }

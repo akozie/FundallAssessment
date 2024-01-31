@@ -2,6 +2,7 @@ package com.example.fundallassessment.presentation.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import com.example.fundallassessment.R
 import com.example.fundallassessment.presentation.viewModel.FundAllExpensesViewModel
@@ -16,7 +17,7 @@ class AuthenticationActivity : AppCompatActivity() {
         setTheme(R.style.Theme_FundallAssessment)
         super.onCreate(savedInstanceState)
 
-        if (viewModel.fetchUserDetailsFromSharedPref()?.email == null){
+        if (viewModel.fetchUserDetailsFromSharedPref()?.id.isNullOrEmpty()){
             setContentView(R.layout.activity_authentication)
         }else{
             setContentView(R.layout.activity_main)

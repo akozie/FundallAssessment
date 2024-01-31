@@ -1,6 +1,5 @@
 package com.example.fundallassessment.utils
 
-import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
@@ -13,10 +12,8 @@ import com.example.fundallassessment.presentation.viewState.Resource
 fun ImageView.setUserImage(imageUrl: String?) {
     imageUrl?.let {
         if (it.isEmpty()) {
-            Log.d("USER_IMAGE_1", "GOT HERE")
             setBackgroundResource(R.drawable.user_image)
         } else {
-            Log.d("USER_IMAGE", "HEREEEE+++")
             load(it)
         }
     }
@@ -30,34 +27,36 @@ fun TextView.formatAmountWithCurrency(amount: String?) {
 }
 
 @BindingAdapter("android:setBalance")
-fun TextView.setBalance(userProfileDetails: Resource<UserProfile>?){
+fun TextView.setBalance(userProfileDetails: Resource<UserProfile>?) {
     userProfileDetails?.let {
-        if (it is Resource.Success){
+        if (it is Resource.Success) {
             formatAmountWithCurrency(it.data?.totalBalance)
         }
     }
 }
+
 @BindingAdapter("android:setIncome")
-fun TextView.setIncome(userProfileDetails: Resource<UserProfile>?){
+fun TextView.setIncome(userProfileDetails: Resource<UserProfile>?) {
     userProfileDetails?.let {
-        if (it is Resource.Success){
+        if (it is Resource.Success) {
             formatAmountWithCurrency(it.data?.income)
         }
     }
 }
+
 @BindingAdapter("android:setSpent")
-fun TextView.setSpent(userProfileDetails: Resource<UserProfile>?){
+fun TextView.setSpent(userProfileDetails: Resource<UserProfile>?) {
     userProfileDetails?.let {
-        if (it is Resource.Success){
+        if (it is Resource.Success) {
             formatAmountWithCurrency(it.data?.spent)
         }
     }
 }
 
 @BindingAdapter("android:setProfileImage")
-fun ImageView.setProfileImage(userProfileDetails: Resource<UserProfile>?){
+fun ImageView.setProfileImage(userProfileDetails: Resource<UserProfile>?) {
     userProfileDetails?.let {
-        if (it is Resource.Success){
+        if (it is Resource.Success) {
             setUserImage(it.data?.profileImage)
         }
     }

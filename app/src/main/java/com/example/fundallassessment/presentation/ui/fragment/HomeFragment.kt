@@ -2,6 +2,7 @@ package com.example.fundallassessment.presentation.ui.fragment
 
 import android.app.AlertDialog
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import com.example.fundallassessment.R
 import com.example.fundallassessment.databinding.FragmentHomeBinding
+import com.example.fundallassessment.presentation.ui.activities.AuthenticationActivity
 import com.example.fundallassessment.presentation.viewModel.FundAllExpensesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -53,7 +55,10 @@ class HomeFragment : Fragment() {
                 android.R.string.yes,
                 DialogInterface.OnClickListener { _, _ ->
                     // Continue with delete operation
+                    fundallViewModel.removeUserDetailsFromSharedPref()
                     requireActivity().finish()
+                    val intent = Intent(requireActivity(), AuthenticationActivity::class.java)
+                    startActivity(intent)
                 }) // A null listener allows the button to dismiss the dialog and take no further action.
             .setNegativeButton(android.R.string.no, null)
             .show()
